@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{url_for('static' , filename='mystyle.css')}}">
+<title>Home page</title>
+</head>
+<body>
+<h1 align="center">DIABETES PREDICTION</h1>
+<div class ="wrap">
+    <form action="/predict" method="POST" align="center">
+        <input type="text" name="p" placeholder="pregnencies" required="required"/><br>
+        <input type="text" name="g" placeholder="Glucose" required="required"/><br>
+        <input type="text" name="b" placeholder="Blood Pressure" required="required"/><br>
+        <input type="text" name="s" placeholder="Skin thickness" required="required"/><br>
+        <input type="text" name="i" placeholder="Insulin" required="required"/><br>
+        <input type="text" name="B" placeholder="BMI" required="required"/><br>
+        <input type="text" name="d" placeholder="Diabetes Pedigree Function" required="required"/><br>
+        <input type="text" name="a" placeholder="Age" required="required"/><br>
+        
+        
+        <button type="submit" class="btn btn-primary btn-block btn-large" style="width:100%;box-sizing:border-box;margin-top:30px;outline:none;background:#60adde;opacity:0.7;border-radius:20px;font-size:20px;color:#fff;" >predict</button>
+    </form>
+
+</div>
+<h2 align="center"><b>{{ pred }}</b><h2>
+</body>
+</html>
